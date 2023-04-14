@@ -89,15 +89,112 @@
 
    body {
     background-color: hsl(0, 0%, 94%);
-    color: hsl(0, 0%, 8%)
+    color: hsl(0, 0%, 8%);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
    }
+
+   ul,
+   ol {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+   }
+
+   h2 {
+    margin: 0;
+    padding: 0;
+  }
+
+   h4 {
+    font-size: 1em;
+   }
+
+
+
    /*Structure styles */
    .content-wrapper {
-    width: ;
+    width: 80%;
     background-color: hsl(0, 0%, 100%);
-    border-radius: ;
-    border: ;
+    border: 20px solid hsl(0, 0%, 100%);
+    border-radius: 20px 20px 25% 20px;
+    margin-top: 20%;
    }
+
+   .date-content {
+    margin-bottom: 60px;
+   }
+
+   /* Trying to break the form up into thirds that are evenly apart from each other */
+   .input-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    padding-bottom: 0;
+   }
+
+   .input-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+   }
+
+   .input-content h4 {
+    text-align: left;
+    color: hsl(0, 1%, 44%);
+    margin-bottom: 0;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+   }
+
+   main,
+   footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   /* NEED TO MAKE A GREY LINE TO GOT THROUGH THE BUTTON */
+
+   .button hr {
+    position: relative;
+    border: none;
+   }
+   button {
+    background-color: hsl(259, 100%, 65%);
+    border: 1px solid hsl(259, 100%, 65%);
+    border-radius: 50%;
+    height: 65px;
+    width: 65px;
+   }
+
+   button img {
+    height: 60%;
+    width: 60%;
+   }
+
+   .age-output {
+    padding-top: 70px;
+    font-weight: 700;
+    text-transform: lowercase;
+    text-align: left;
+   }
+
+   .age-output h2 {
+    font-size: 3em;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-style: italic;
+   }
+
+   .output-data {
+    color: hsl(259, 100%, 65%);
+    font-size: 1.25em;
+   }
+
   
   /* ==========================================================================
      Helper classes
