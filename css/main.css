@@ -107,7 +107,7 @@
     padding: 0;
   }
 
-   h4 {
+   label {
     font-size: 1em;
    }
 
@@ -123,13 +123,13 @@
    }
 
    .date-content {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
    }
 
    /* Trying to break the form up into thirds that are evenly apart from each other */
    .input-wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
     flex-flow: row wrap;
     padding-bottom: 0;
@@ -140,14 +140,49 @@
     justify-content: center;
     flex-direction: column;
     width: 30%;
+    text-align: left;
+    margin-bottom: 0;
+    padding-bottom: 40px;
    }
 
-   .input-content h4 {
-    text-align: left;
-    color: hsl(0, 1%, 44%);
-    margin-bottom: 0;
-    letter-spacing: 0.1em;
+   .input-content  label{
+    letter-spacing: 0.2em;
     font-weight: 400;
+    color: hsl(0, 1%, 44%);
+   }
+
+   .input-content input {
+    font-weight: 700;
+   }
+
+   input[type='number'] {
+    font-size: 1.25em;
+    font-weight: 800;
+    border: 1px solid hsl(0, 0, 86%);
+    border-radius: 5px;
+   }
+
+   input[type='number']:focus {
+    border: 1px solid hsl(259, 57%, 28%);
+   }
+
+   ::placeholder {
+    font-size: 1em;
+    font-weight: 700;
+    color: hsl(0, 0%, 59%);
+   }
+
+   #nothing-day,
+   #nothing-month,
+   #nothing-year,
+   #not-valid-day,
+   #not-valid-month,
+   #not-valid-year, 
+   #date-valid {
+    color: hsl(0, 100%, 67%);
+    font-size: 0.5em;
+    font-style: italic;
+    display: none;
    }
 
    main,
@@ -158,16 +193,34 @@
    }
    /* NEED TO MAKE A GREY LINE TO GOT THROUGH THE BUTTON */
 
-   .button hr {
+   .button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    border: none;
+    width: 300%;
    }
+
    button {
     background-color: hsl(259, 100%, 65%);
-    border: 1px solid hsl(259, 100%, 65%);
-    border-radius: 50%;
+    color: black;
+    border: none;
+    border-radius: 100%;
     height: 65px;
     width: 65px;
+    cursor: pointer;
+   }   
+   /*
+   .button::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: black;
+   }*/
+
+   button:hover {
+    background-color: #000;
    }
 
    button img {
@@ -176,7 +229,7 @@
    }
 
    .age-output {
-    padding-top: 70px;
+    /*padding-top: 70px;*/
     font-weight: 700;
     text-transform: lowercase;
     text-align: left;
@@ -190,7 +243,9 @@
     font-style: italic;
    }
 
-   .output-data {
+   #output-data-years,
+   #output-data-months,
+   #output-data-days {
     color: hsl(259, 100%, 65%);
     font-size: 1.25em;
    }
@@ -279,8 +334,40 @@
      Modify as content requires.
      ========================================================================== */
   
-  @media only screen and (min-width: 35em) {
+  @media only screen and (min-width: 768px) {
     /* Style adjustments for viewports that meet the condition */
+    .content-wrapper {
+      width: 60%;
+    }
+
+    label {
+      font-size: 1.2em;
+    }
+
+    .age-output h2 {
+      font-size: 3.5em;
+    }
+
+    .button {
+      align-items: end;
+    }    
+    
+
+
+  }
+
+  @media only screen and (min-width:1200px) {
+    .content-wrapper {
+      width: 35%;
+    }
+
+    label {
+      font-size: 1.25em;
+    }
+
+    .age-output h2 {
+      font-size: 3.75em;
+    }
   }
   
   @media print,

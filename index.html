@@ -12,6 +12,7 @@
   <!--CSS and JS-->
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/main.css">
+ 
   
   <title>Frontend Mentor | Age calculator app</title>
 
@@ -24,32 +25,43 @@
 <body>
   <main>
     <div class="content-wrapper">
-      <div class="date-content">
-        <form class="input-wrapper">
+      <section class="date-content">
+        <form action="#" class="input-wrapper">
           <div class="input-content">
-            <h4>Day</h4>
-            <input type="text" class="input-data" placeholder="DD"/>
+            <label for="date">Day</label>
+            <input type="number" id="input-data-day" placeholder="DD"/>
+            <p id="nothing-day">This field is required</p>
+            <p id="not-valid-day">Must be a valid day</p>
+            <p id="date-valid">Must be a valid date</p>
           </div>
           <div class="input-content">
-            <h4>Month</h4>
-            <input type="text" class="input-data" placeholder="MM"/>
+            <label for="month">Month</label>
+            <input type="number" id="input-data-month" placeholder="MM"/>
+            <p id="nothing-month">This field is required</p>
+            <p id="not-valid-month">Must be a valid month</p>
           </div>
           <div class="input-content">
-            <h4>Year</h4>
-            <input type="text" class="input-data" placeholder="YYYY"/>
+            <label for="year">Year</label>
+            <input type="number" id="input-data-year" placeholder="YYYY"/>
+            <p id="nothing-year">This field is required</p>
+            <p id="not-valid-year">Must be in the past</p>
+          </div>
+          <div class="button"> <!--MIGHT SWITCH BACK-->
+            <button class="arrow-button">
+              <img src="assets/images/icon-arrow.svg" alt="arrow">
+            </button>
           </div>
         </form>
-      </div>
-      <div class="button"> <!--MIGHT SWITCH BACK-->
-        <button><img src="assets/images/icon-arrow.svg" alt="arrow"></button>
-      </div>
-      <div class="age-output"> <!--NEED TO CHANGE IN THE FUTURE-->
-          <h2><span class="output-data">-- </span>Years</h2>
-          <h2><span class="output-data">-- </span>Months</h2>
-          <h2><span class="output-data">-- </span>Days</h2>
-      </div>
+      </section>
+
+      <section class="age-output">
+          <h2><span id="output-data-years">-- </span>Years</h2>
+          <h2><span id="output-data-months">-- </span>Months</h2>
+          <h2><span id="output-data-days">-- </span>Days</h2>
+      </section>
     </div> 
   </main>
+  <script src="js/script.js" defer></script>
   <footer>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
